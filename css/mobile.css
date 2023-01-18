@@ -1,0 +1,15 @@
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+aside {
+  margin: 0 2rem;
+}
+
+/* Day squares */
+
+.holidiv {
+  font-size: 10px;
+}

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calendar</title>
+    <link
+      href="//db.onlinewebfonts.com/c/501e03d4c0303f394033bcaf435f4b3e?family=Suisse+Int'l+Medium"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="js/main.js"></script>
+    <script src="js/calendar.js"></script>
+    <script src="js/holidays.js"></script>
+    <script src="js/today.js"></script>
+    <script src="js/todos.js"></script>
+    <script src="js/calendar-todos.js"></script>
+    <script src="js/dayclick.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/aside.css" />
+    <link rel="stylesheet" href="css/mobile.css" media="(max-width:800px)" />
+    <link rel="stylesheet" href="css/calendar.css" />
+  </head>
+  <body>
+    <header>
+      <h1 class="logoText">25</h1>
+      <div class="svgWrapper">
+        <?xml version="1.0" encoding="UTF-8"?>
+        <svg id="circle1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="-7 -7 215 215"
+        >
+          <circle cx="103.66" cy="103.66" r="103.66" />
+        </svg>
+        <svg id="circle2"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="-7 -7 215 215"
+        >
+          <circle cx="103.66" cy="103.66" r="103.66" />
+        </svg>
+        <svg id="circle3"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="-7 -7 215 215"
+        >
+          <circle cx="103.66" cy="103.66" r="103.66" />
+        </svg>
+        <svg id="circle4"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="-7 -7 215 215"
+        >
+          <circle cx="103.66" cy="103.66" r="103.66" />
+        </svg>
+        <svg id="circle5"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="-7 -7 215 215"
+        >
+          <circle cx="103.66" cy="103.66" r="103.66" />
+        </svg>
+        <svg id="circle6"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="-7 -7 215 215"
+        >
+          <circle cx="103.66" cy="103.66" r="103.66" />
+        </svg>
+      </div>
+      <h1 class="logoText">7</h1>
+    </header>
+    <aside id="side-bar">
+      <div id="timeDayDate" data-cy="welcome-segment">
+        <div class="timeDaydateHigherWrapper">
+          <div id="displayCurrentTime"></div>
+          <div id="displayCurrentYear"></div>
+        </div>
+
+        <div class="timeDaydateLowerWrapper">
+          <div id="displayTodaysDay"></div>
+          <div id="displayTodaysDateMonth"></div>
+        </div>
+      </div>
+      <div id="todo">To do-list</div>
+      <div id="box-shadow">
+        <button data-cy="todo-reveal-form" id="new-event-button">
+          + New Task
+        </button>
+        <div id="new-event-canvas">
+          <div id="position-button-x"><button id="cancel-event-button">X</button></div>
+          <form onsubmit="return false;" id="input-form">
+            <input
+              type="text"
+              name="title-input"
+              id="title-input"
+              data-cy="todo-task-input"
+              placeholder="Title"
+              autocomplete="off"
+              value=""
+            />
+            <input
+              type="date"
+              name="date-input"
+              id="date-input"
+              data-cy="todo-date-input"
+              autocomplete="off"
+            />
+            <input
+              type="time"
+              name="start-time-input"
+              id="start-time-input"
+              autocomplete="off"
+            />
+            <input
+              type="time"
+              name="end-time-input"
+              id="end-time-input"
+              autocomplete="off"
+            />
+            <button data-cy="save-todo" id="save-task-button"></button>
+          </form>
+        </div>
+      </div>
+
+      <div id="tasks-canvas"></div>
+    </aside>
+
+    <main>
+      <div class="flex-row" id="calendar-head">
+        <h1 id="open-month"></h1>
+        <h1 id="open-year"></h1>
+      </div>
+      <div class="grid" id="daysRow">
+        <div class="dayHeaders" id="monday">Mon</div>
+        <div class="dayHeaders" id="tuesday">Tue</div>
+        <div class="dayHeaders" id="wednesday">Wed</div>
+        <div class="dayHeaders" id="thursday">Thu</div>
+        <div class="dayHeaders" id="friday">Fri</div>
+        <div class="dayHeaders" id="saturday">Sat</div>
+        <div class="dayHeaders" id="sunday">Sun</div>
+      </div>
+      <div class="grid" id="calendarWrapper" data-cy="calendar-body"></div>
+      <div class="flex-row" id="nav-button-container">
+        <button class="nav-button" id="previous-month-button">
+          <span class="material-symbols-outlined">arrow_back</span>
+        </button>
+        <button class="nav-button" id="next-month-button">
+          <span class="material-symbols-outlined">arrow_forward</span>
+        </button>
+      </div>
+    </main>
+  </body>
+</html>
