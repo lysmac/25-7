@@ -9,4 +9,4 @@ A school project where we had to design a calendar and todo-list.
 Created by: [@leonbjorklund](https://github.com/leonbjorklund)
 [@lysmac](https://github.com/lysmac) [@NathanaelBlackbourn](https://github.com/NathanaelBlackbourn)
 
-[Visis the project page](https://lysmac.github.io/25-7/)
+[Visit the project page](https://lysmac.github.io/25-7/)
